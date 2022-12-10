@@ -1,0 +1,13 @@
+df_aul = read.delim("clipboard")
+head(df_aul)
+model <- aov(korosi~metode, data=df_aul)
+summary(model)
+tukey.test <- TukeyHSD(model)
+tukey.test
+df_aul=PlantGrowth
+View(df_aul)
+head(df_aul)
+model <-aov(weight~group, data=df_aul)
+summary(model)
+tukey.test <- TukeyHSD(model)
+tukey.test
